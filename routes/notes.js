@@ -11,15 +11,16 @@ readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))//db.json
 //POST route
 notes.post('/', (req,res) => {
     const {notesTitle, noteText} = req.body;//noteTite and noteText are in js/index.js
+    //body is the data being sent and retrieved, not necessarily html body section content!!! The content of the request.
 
     if (notesTitle && noteText){
         const newNote = {
             notesTitle,
             noteText,
-            //uuidv4 from line 2?
+            note_id:uuidv4(),
         };
 
-        readAndAppend(newNote, './db/notes.json');//or public/notes.html?
+        readAndAppend(newNote, './db/notes.json');//we want to add our data to the json object
         
         const response = {
             status: 'success',
