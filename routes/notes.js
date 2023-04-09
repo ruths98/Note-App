@@ -17,7 +17,7 @@ notes.post('/', (req,res) => {
         const newNote = {
             notesTitle,
             noteText,
-            note_id:uuidv4(),
+            id:uuidv4(),
         };
 
         readAndAppend(newNote, './db/notes.json');//we want to add our data to the json object
