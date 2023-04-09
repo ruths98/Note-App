@@ -1,11 +1,11 @@
 const notes = require('express').Router();
 const {v4: uuidv4 } = require('uuid');
-const fs = require('fs');
+const fs = require('fs');//idk if we need this here?
 
 
 //GET route to retrieve notes?
 notes.get('/', (req,res) => 
-readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)))//do I make a new notes.json or will it generate on its own?
+readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))//db.json saves the notes as JSON objects
 );
 
 //POST route
