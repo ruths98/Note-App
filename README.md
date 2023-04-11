@@ -47,13 +47,14 @@ The following images show the web application's appearance and functionality:
 ## Getting Started
 
 On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
-
+<!-- done -->
 The following HTML routes should be created:
 
 * `GET /notes` should return the `notes.html` file.
-
+<!-- done in server.js -->
 
 * `GET *` should return the `index.html` file.
+<!-- done in server.js -->
 
 The following API routes should be created:
 
@@ -140,3 +141,6 @@ You are required to submit BOTH of the following for review:
 
 - - -
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+link to deployed application:
+https://protected-oasis-85255.herokuapp.com/
