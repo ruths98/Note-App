@@ -1,12 +1,7 @@
 const notes = require('express').Router();
 const {v4: uuidv4 } = require('uuid');
 const fs = require('fs');//idk if we need this here?
-
-
-//GET route to retrieve notes?
-notes.get('/', (req,res) => 
-readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))//db.json saves the notes as JSON objects
-);
+const js = require('../public/assets/js/index');
 
 //POST route
 notes.post('/', (req,res) => {
@@ -31,5 +26,12 @@ notes.post('/', (req,res) => {
     } else {
         res.json('Error: new note not added');
     }
-})
+}
+)
+
+//GET route to retrieve notes?
+notes.get('/', (req,res) =>
+readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))//db.json saves the notes as JSON objects
+) ;
+
 module.exports = notes;
