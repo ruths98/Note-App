@@ -1,7 +1,12 @@
 const notes = require('express').Router();
 const {v4: uuidv4 } = require('uuid');
 const fs = require('fs');//idk if we need this here?
-const js = require('../public/assets/js/index');
+// const js = require('../public/assets/js/index');
+
+//GET route to retrieve notes?
+notes.get('/', (req,res) =>
+readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))//db.json saves the notes as JSON objects
+) ;
 
 //POST route
 notes.post('/', (req,res) => {
@@ -29,9 +34,6 @@ notes.post('/', (req,res) => {
 }
 )
 
-//GET route to retrieve notes?
-notes.get('/', (req,res) =>
-readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))//db.json saves the notes as JSON objects
-) ;
+
 
 module.exports = notes;
