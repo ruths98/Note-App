@@ -3,7 +3,6 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-// const js = require('express').Router; do I need this?
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');

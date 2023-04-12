@@ -1,6 +1,12 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "New practice",
+        "text": "text",
+        "id": "1d805413-7c15-45e5-892b-cefe1ee1e0e0"
+    },
+    {
+        "title": "more titles",
+        "text": "another note",
+        "id": "6bdeb02d-312f-494d-8e81-da9c42c00f6c"
     }
 ]
